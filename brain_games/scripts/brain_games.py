@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def main():
     print("Welcome to the Brain Games!")
 
