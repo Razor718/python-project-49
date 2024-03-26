@@ -32,4 +32,4 @@ for i in range(3):
     i += 1
     get_number()
 if n == 0:
-    print(f'Congratulations,{brain_games_.name1}!')
+    print(f'Congratulations, {brain_games_.name1}!')
