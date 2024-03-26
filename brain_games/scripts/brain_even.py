@@ -23,7 +23,7 @@ def get_number():
             correct_answer = 'no'
         else:
             correct_answer = 'yes'
-        print(f'''{answer} is wrong answer ;(. 
+        print(f'''{answer} is wrong answer ;(.
               Correct answer was {correct_answer}.
               Let`s try again, {brain_games_.name1}''')
 
