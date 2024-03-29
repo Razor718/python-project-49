@@ -1,5 +1,5 @@
-from brain_games_ import main
-import brain_games_
+from brain_games.scripts.brain_games import main
+import brain_games.scripts.brain_games as brain_games
 from random import randint
 main()
 print('Answer "yes" if the number is even, otherwise answer "no"')
@@ -25,11 +25,11 @@ def get_number():
             correct_answer = 'yes'
         print(f'''{answer} is wrong answer ;(.
               Correct answer was {correct_answer}.
-              Let`s try again, {brain_games_.name1}''')
+              Let`s try again, {brain_games.name1}''')
 
 
 for i in range(3):
     i += 1
     get_number()
 if n == 0:
-    print(f'Congratulations, {brain_games_.name1}!')
+    print(f'Congratulations, {brain_games.name1}!')
