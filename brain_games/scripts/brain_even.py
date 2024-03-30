@@ -1,7 +1,21 @@
-from brain_games.scripts.brain_games import main
-import brain_games.scripts.brain_games as brain_games
+import prompt
 from random import randint
+
+
+def welcome_user():
+    name = prompt.string('May I have your name? ')
+    print('Hello,', name + '!')
+    return name
+
+
+def main():
+    print("Welcome to the Brain Games!")
+
+
 main()
+
+
+name_ = welcome_user()
 print('Answer "yes" if the number is even, otherwise answer "no"')
 n = 0
 
@@ -25,11 +39,11 @@ def get_number():
             correct_answer = 'yes'
         print(f'''{answer} is wrong answer ;(.
               Correct answer was {correct_answer}.
-              Let`s try again, {brain_games.name1}''')
+              Let`s try again, {name_}''')
 
 
 for i in range(3):
     i += 1
     get_number()
 if n == 0:
-    print(f'Congratulations, {brain_games.name1}!')
+    print(f'Congratulations, {name_}!')
