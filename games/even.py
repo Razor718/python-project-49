@@ -21,7 +21,6 @@ n = 0
 
 
 def get_number():
-    global random_number
     random_number = randint(1, 1000)
     print(f'Question: {random_number}')
     answer = input()
