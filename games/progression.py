@@ -25,7 +25,7 @@ def get_progression():
             result.append(i)
         random_index = result.pop(random.randint(0, len(result) - 1))
         print(f'Question: {result}')
-        answer = prompt.integer('Your asnwer: ')
+        answer = prompt.integer('Your answer: ')
         # Делаю проверку на правильность ответа
         if answer == random_index:
             print('Correct!')
