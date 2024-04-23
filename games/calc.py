@@ -36,7 +36,9 @@ def get_expression():
     if c == answer:
         print('Correct!')
     else:
-        print(f'''{answer} is wrong answer ;(.
+        print(f'''
+            Question: {a, random_operator, b}
+            {answer} is wrong answer ;(.
             Correct answer was {c}.
             Let`s try again, {name_}!''')
         global n
