@@ -16,7 +16,7 @@ main()
 
 
 name_ = welcome_user()
-print('Answer "yes" if the number is even, otherwise answer "no"')
+print('Answer "yes" if the number is even, otherwise answer "no".')
 n = 0
 
 
