@@ -13,40 +13,39 @@ def welcome_user():
 
 
 main()
-name_ = welcome_user()
-print('What is the result of the expression?')
-n = 0
 
 
 def get_expression():
-    a = random.randint(1, 1000)
-    b = random.randint(1, 1000)
-    operators = ['+', '-', '*']
-    random_operator = random.choice(operators)
-    print('Question:', a, random_operator, b)
-    answer = int(input())
-    print('Your answer: ', answer)
-    c = 0
-    if random_operator == '+':
-        c = a + b
-    if random_operator == '-':
-        c = a - b
-    if random_operator == '*':
-        c = a * b
-    if c == answer:
-        print('Correct!')
-    else:
-        print(f'''
-            Question: {a, random_operator, b}
-            {answer} is wrong answer ;(.
-            Correct answer was {c}.
-            Let's try again, {name_}!''')
-        global n
-        n = 1
+    name_ = welcome_user()
+    print('What is the result of the expression?')
+    userscore = 0
+    winscore = 3
+    while userscore < winscore:
+        a = random.randint(1, 1000)
+        b = random.randint(1, 1000)
+        operators = ['+', '-', '*']
+        random_operator = random.choice(operators)
+        print('Question:', a, random_operator, b)
+        answer = int(input())
+        print('Your answer: ', answer)
+        c = 0
+        if random_operator == '+':
+            c = a + b
+        if random_operator == '-':
+            c = a - b
+        if random_operator == '*':
+            c = a * b
+        if c == answer:
+            print('Correct!')
+            userscore += 1
+        else:
+            print(f'''
+                Question: {a, random_operator, b}
+                {answer} is wrong answer ;(.
+                Correct answer was {c}.
+                Let's try again, {name_}!''')
+            break
+        if userscore == 3:
+            print(f'Congratulations, {name_}!')
 
-
-for i in range(3):
-    i += 1
-    get_expression()
-if n == 0:
-    print(f'Congratulations, {name_}!')
+get_expression()
