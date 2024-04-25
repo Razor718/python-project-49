@@ -35,7 +35,7 @@ def get_progression():
         f'''Question: {result}
         Your answer: {answer}
         {answer} is wrong answer ;(. Correct answer was {random_index}
-        Let`s try again, {name_}''')
+        Let's try again, {name_}''')
             break
         if userscore == 3:
             print(f'Congratulations, {name_}')

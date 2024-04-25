@@ -40,7 +40,7 @@ def get_expression():
             Question: {a, random_operator, b}
             {answer} is wrong answer ;(.
             Correct answer was {c}.
-            Let`s try again, {name_}!''')
+            Let's try again, {name_}!''')
         global n
         n = 1
 

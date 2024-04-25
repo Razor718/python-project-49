@@ -29,12 +29,12 @@ def get_number():
         if random_number % 2 == 0 and answer != 'yes':
             print(f'''{answer} is wrong answer ;(.
             Correct answer was yes.
-            Let`s try again, {name_}''')
+            Let's try again, {name_}''')
             break
         elif random_number % 2 != 0 and answer != 'no':
             print(f'''{answer} is wrong answer ;(.
             Correct answer was no.
-            Let`s try again, {name_}''')
+            Let's try again, {name_}''')
             break
         else:
             print('Correct!')
