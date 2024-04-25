@@ -40,5 +40,5 @@ def get_number():
             print('Correct!')
             usercore += 1
         if usercore == 3:
-            print(f'Congratulation, {name_}!') 
+            print(f'Congratulations, {name_}!') 
 get_number()

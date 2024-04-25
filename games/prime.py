@@ -44,7 +44,7 @@ def check_simplicity():
         Let`s try again, {name_}''')
             break
         if userscore == 3:
-            print(f'Congratulation, {name_}')
+            print(f'Congratulations, {name_}')
 
 check_simplicity()
         
