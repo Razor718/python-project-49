@@ -17,14 +17,15 @@ def get_progression():
     winscore = 3
     # Циклом while ставлю ограничение на количество раундов
     while userscore < winscore:
-        a = random.randint(1, 30)
-        b = random.randint(31, 50)
+        a = random.randint(1, 50)
+        b = random.randint(51, 100)
         result = []
         # Циклом for генерирую последовательность
         for i in range(a, b, 3):
             result.append(i)
-        random_index = result.pop(random.randint(0, len(result) - 1))
-        print(f'Question: {result}')
+            ten_numbers = result[0:10]
+        random_index = ten_numbers.pop(random.randint(0, len(ten_numbers) - 1))
+        print(f'Question: {ten_numbers}')
         answer = prompt.integer('Your answer: ')
         # Делаю проверку на правильность ответа
         if answer == random_index:
@@ -32,7 +33,7 @@ def get_progression():
             userscore += 1
         else:
             print(
-        f'''Question: {result}
+        f'''Question: {ten_numbers}
         Your answer: {answer}
         {answer} is wrong answer ;(. Correct answer was {random_index}
         Let's try again, {name_}!''')
