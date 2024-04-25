@@ -21,7 +21,7 @@ def is_simple(number):
 
 def check_simplicity():
     name_ = welcome_user()
-    print('Answer "yes" if given number is prime. Otherwise answer "no"')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     userscore = 0
     winscore = 3
     while userscore < winscore:
