@@ -12,7 +12,7 @@ def welcome_user():
 
 def get_progression():
     name_ = welcome_user()
-    print('What number is missing in the proggresion?')
+    print('What number is missing in the progression?')
     userscore = 0
     winscore = 3
     # Циклом while ставлю ограничение на количество раундов
