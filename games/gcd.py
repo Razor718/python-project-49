@@ -29,7 +29,7 @@ def find_divisor():
             else:
                 b %= a
         result = a + b
-        answer = prompt.integer("You answer: ")
+        answer = prompt.integer("Your answer: ")
         if answer == result:
             print('Correct!')
             user_score += 1
