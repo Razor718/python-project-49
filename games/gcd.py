@@ -1,21 +1,10 @@
 import prompt
 import random
-
-
-def main():
-    print("Welcome to the Brain Games!")
-
-main()
-
-
-def welcome_user():
-    name = prompt.string('May I have your name? ')
-    print('Hello,', name + '!')
-    return name
+from brain_games.scripts.brain_main import brain_main
 
 
 def find_divisor():
-    name_ = welcome_user()
+    name = brain_main()
     print('Find the greatest common divisor of given numbers.')
     user_score = 0
     winscore = 3
@@ -36,11 +25,14 @@ def find_divisor():
         else:
             print(f'''{answer} is wrong answer ;(.
             Correct answer was {result}.
-            Let's try again, {name_}!''')
+            Let's try again, {name}!''')
             break
 
         if user_score == 3:
-            print(f"Congratulations, {name_}!")
+            print(f"Congratulations, {name}!")
 
+def main():
+    find_divisor()
 
-find_divisor()
+if __name__ == '__main__':
+    main()

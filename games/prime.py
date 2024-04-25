@@ -1,14 +1,6 @@
 import prompt
 import random
-def main():
-    print("Welcome to the Brain Games!")
-
-main()
-
-def welcome_user():
-    name = prompt.string('May I have your name? ')
-    print('Hello,', name + '!')
-    return name
+from brain_games.scripts.brain_main import brain_main
 
 def is_simple(number):
     if number < 2:
@@ -20,7 +12,7 @@ def is_simple(number):
 
 
 def check_simplicity():
-    name_ = welcome_user()
+    name = brain_main()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     userscore = 0
     winscore = 3
@@ -41,10 +33,13 @@ def check_simplicity():
         Your answer: {answer}
         {answer} is wrong asnwer;(.
         Correct asnwer was {'yes' if is_prime else 'no'}
-        Let's try again, {name_}!''')
+        Let's try again, {name}!''')
             break
         if userscore == 3:
-            print(f'Congratulations, {name_}!')
+            print(f'Congratulations, {name}!')
+def main():
+    check_simplicity()
 
-check_simplicity()
+if __name__ == '__main__':
+    main()
         

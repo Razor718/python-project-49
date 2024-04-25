@@ -1,22 +1,11 @@
 import prompt
 import random
+from brain_games.scripts.brain_main import brain_main
 
-
-def main():
-    print("Welcome to the Brain Games!")
-
-
-def welcome_user():
-    name = prompt.string('May I have your name? ')
-    print('Hello,', name + '!')
-    return name
-
-
-main()
 
 
 def get_expression():
-    name_ = welcome_user()
+    name = brain_main()
     print('What is the result of the expression?')
     userscore = 0
     winscore = 3
@@ -25,7 +14,12 @@ def get_expression():
         b = random.randint(1, 1000)
         operators = ['+', '-', '*']
         random_operator = random.choice(operators)
-        print('Question:', a, random_operator, b)
+        operator = ''
+        for elem in random_operator:
+            operator += str(elem)
+            operator += ''
+        expression = a, operator, b
+        print('Question:', a, operator, b)
         answer = int(input())
         print('Your answer: ', answer)
         c = 0
@@ -40,12 +34,16 @@ def get_expression():
             userscore += 1
         else:
             print(f'''
-                Question: {a, random_operator, b}
+                Question: {a} {operator} {b}
                 {answer} is wrong answer ;(.
                 Correct answer was {c}.
-                Let's try again, {name_}!''')
+                Let's try again, {name}!''')
             break
         if userscore == 3:
-            print(f'Congratulations, {name_}!')
+            print(f'Congratulations, {name}!')
 
-get_expression()
+def main():
+    get_expression()
+
+if __name__ == '__main__':
+    main()

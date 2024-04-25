@@ -1,17 +1,9 @@
 import prompt
 import random
-def main():
-    print("Welcome to the Brain Games!")
-
-main()
-
-def welcome_user():
-    name = prompt.string('May I have your name? ')
-    print('Hello,', name + '!')
-    return name
+from brain_games.scripts.brain_main import brain_main
 
 def get_progression():
-    name_ = welcome_user()
+    name = brain_main()
     print('What number is missing in the progression?')
     userscore = 0
     winscore = 3
@@ -42,9 +34,13 @@ def get_progression():
         f'''Question: {question}
         Your answer: {answer}
         {answer} is wrong answer ;(. Correct answer was {random_index}
-        Let's try again, {name_}!''')
+        Let's try again, {name}!''')
             break
         if userscore == 3:
-            print(f'Congratulations, {name_}!')
-        
-get_progression()
+            print(f'Congratulations, {name}!')
+
+def main():        
+    get_progression()
+
+if __name__ == '__main__':
+    main()
