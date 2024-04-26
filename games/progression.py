@@ -13,17 +13,14 @@ def get_progression():
         a = random.randint(1, 85)
         b = random.randint(99, 101)
         c = random.randint(2, 3)
-        result = list(range(a, b , c))
-        ten_numbers = result[0:10]
-        random_index = random.choice(ten_numbers)
-        index = ten_numbers.index(random_index)
-        ten_numbers[index] = '..'
-        question = ''
-        # Циклом for убираю кавычки
-        for elem in ten_numbers:
-            question += str(elem)
-            question += ' '
-        print(f'Question: {question}')
+        # Генерирую последовательность функцией range
+        result = list(range(a, b, c))
+        random_index = random.choice(result[0:10])
+        index = result.index(random_index)
+        result[index] = '..'
+        # Привожу список-прогрессию к строке и ставлю разделитель
+        str_result = ' '.join(map(str, result))
+        print(f'Question: {str_result}')
         answer = prompt.integer('Your answer: ')
         # Делаю проверку на правильность ответа
         if answer == random_index:
@@ -31,10 +28,10 @@ def get_progression():
             userscore += 1
         else:
             print(
-    f'''Question: {question}
-    Your answer: {answer}
-    {answer} is wrong answer ;(. Correct answer was {random_index}
-    Let's try again, {name}!''')
+    f'''Question: {str_result}
+Your answer: {answer}
+{answer} is wrong answer ;(. Correct answer was {random_index}
+Let's try again, {name}!''')
             break
         if userscore == 3:
             print(f'Congratulations, {name}!')

@@ -31,10 +31,10 @@ def check_simplicity():
         else:
             print(
     f'''Question: {random_number}
-    Your answer: {answer}
-    {answer} is wrong asnwer;(.
-    Correct asnwer was {'yes' if is_prime else 'no'}
-    Let's try again, {name}!''')
+Your answer: {answer}
+{answer} is wrong asnwer;(.
+Correct asnwer was {'yes' if is_prime else 'no'}
+Let's try again, {name}!''')
             break
         if userscore == 3:
             print(f'Congratulations, {name}!')
