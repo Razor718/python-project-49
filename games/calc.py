@@ -12,26 +12,23 @@ def get_expression():
         b = random.randint(1, 1000)
         operators = ['+', '-', '*']
         random_operator = random.choice(operators)
-        operator = ''
-        for elem in random_operator:
-            operator += str(elem)
-            operator += ''
-        print('Question:', a, operator, b)
+        str_operator = ' '.join(map(str, random_operator))
+        print('Question:', a, str_operator, b)
         answer = int(input())
         print('Your answer: ', answer)
-        c = 0
-        if random_operator == '+':
-            c = a + b
-        if random_operator == '-':
-            c = a - b
-        if random_operator == '*':
-            c = a * b
+        match random_operator:
+            case '+':
+                c = a + b
+            case '-':
+                c = a - b
+            case '*':
+                c = a * b
         if c == answer:
             print('Correct!')
             userscore += 1
         else:
             print(f'''
-                Question: {a} {operator} {b}
+                Question: {a} {str_operator} {b}
                 {answer} is wrong answer ;(.
                 Correct answer was {c}.
                 Let's try again, {name}!''')
