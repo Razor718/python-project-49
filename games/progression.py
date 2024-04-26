@@ -28,10 +28,11 @@ def get_progression():
             userscore += 1
         else:
             print(
-    f'''Question: {str_result}
-Your answer: {answer}
-{answer} is wrong answer ;(. Correct answer was {random_index}
-Let's try again, {name}!''')
+                f'''Question: {str_result}
+                Your answer: {answer}
+                {answer} is wrong answer ;(.
+                Correct answer was {random_index}
+                Let's try again, {name}!''')
             break
         if userscore == 3:
             print(f'Congratulations, {name}!')
