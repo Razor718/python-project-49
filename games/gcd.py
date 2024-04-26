@@ -31,9 +31,10 @@ def find_divisor():
         if user_score == 3:
             print(f"Congratulations, {name}!")
 
+
 def main():
     find_divisor()
 
+
 if __name__ == '__main__':
     main()
-

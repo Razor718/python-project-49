@@ -2,6 +2,7 @@ import prompt
 import random
 from brain_games.scripts.brain_main import brain_main
 
+
 def is_simple(number):
     if number < 2:
         return False
@@ -29,16 +30,19 @@ def check_simplicity():
             userscore += 1
         else:
             print(
-        f'''Question: {random_number}
-        Your answer: {answer}
-        {answer} is wrong asnwer;(.
-        Correct asnwer was {'yes' if is_prime else 'no'}
-        Let's try again, {name}!''')
+f'''Question: {random_number}
+Your answer: {answer}
+{answer} is wrong asnwer;(.
+Correct asnwer was {'yes' if is_prime else 'no'}
+Let's try again, {name}!''')
             break
         if userscore == 3:
             print(f'Congratulations, {name}!')
+
+
 def main():
     check_simplicity()
+
 
 if __name__ == '__main__':
     main()

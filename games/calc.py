@@ -1,7 +1,5 @@
-import prompt
 import random
 from brain_games.scripts.brain_main import brain_main
-
 
 
 def get_expression():
@@ -18,7 +16,6 @@ def get_expression():
         for elem in random_operator:
             operator += str(elem)
             operator += ''
-        expression = a, operator, b
         print('Question:', a, operator, b)
         answer = int(input())
         print('Your answer: ', answer)
@@ -42,9 +39,10 @@ def get_expression():
         if userscore == 3:
             print(f'Congratulations, {name}!')
 
+
 def main():
     get_expression()
 
+
 if __name__ == '__main__':
     main()
-

@@ -2,6 +2,7 @@ import prompt
 import random
 from brain_games.scripts.brain_main import brain_main
 
+
 def get_progression():
     name = brain_main()
     print('What number is missing in the progression?')
@@ -31,16 +32,18 @@ def get_progression():
             userscore += 1
         else:
             print(
-        f'''Question: {question}
-        Your answer: {answer}
-        {answer} is wrong answer ;(. Correct answer was {random_index}
-        Let's try again, {name}!''')
+f'''Question: {question}
+Your answer: {answer}
+{answer} is wrong answer ;(. Correct answer was {random_index}
+Let's try again, {name}!''')
             break
         if userscore == 3:
             print(f'Congratulations, {name}!')
 
-def main():        
+
+def main():
     get_progression()
+
 
 if __name__ == '__main__':
     main()

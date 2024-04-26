@@ -1,4 +1,3 @@
-import prompt
 from random import randint
 from brain_games.scripts.brain_main import brain_main
 
@@ -27,10 +26,12 @@ def get_number():
             print('Correct!')
             usercore += 1
         if usercore == 3:
-            print(f'Congratulations, {name}!') 
+            print(f'Congratulations, {name}!')
+
 
 def main():
     get_number()
+
 
 if __name__ == '__main__':
     main()
