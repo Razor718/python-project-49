@@ -97,4 +97,8 @@ def launch_the_game():
                     break
                 if userscore == 3:
                     print(f'Congratulations, {brain_main.name}!')
-launch_the_game()            
+def main():
+    launch_the_game()
+
+if __name__ == '__main__':
+    main()      
