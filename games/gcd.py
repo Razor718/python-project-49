@@ -2,6 +2,7 @@ import prompt
 import random
 
 def brain_gcd():
+    print('Find the greatest common divisor of given numbers.')
     global result, answer
     a = random.randint(1, 100)
     b = random.randint(1, 100)

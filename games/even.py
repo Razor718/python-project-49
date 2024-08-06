@@ -1,6 +1,7 @@
 from random import randint
 
 def brain_even():
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     global random_number, answer
     random_number = randint(1, 1000)
     print(f'Question: {random_number}')

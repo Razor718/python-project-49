@@ -1,6 +1,7 @@
 import random
 
 def brain_calc():
+    print('What is the result of the expression?')
     global a, b, c, answer, str_operator
     a = random.randint(1, 1000)
     b = random.randint(1, 1000)

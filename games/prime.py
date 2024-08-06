@@ -2,6 +2,7 @@ import prompt
 import random
 
 def is_simple(number):
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     if number < 2:
         return False
     for i in range(2, int(number ** 0.5) + 1):
