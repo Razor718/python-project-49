@@ -1,5 +1,7 @@
 import random
 desc = 'What is the result of the expression?'
+
+
 def brain_calc():
     global correct_answer, answer, desc
     a = random.randint(1, 1000)
@@ -18,8 +20,10 @@ def brain_calc():
         case '*':
             correct_answer = a * b
 
+
 def main():
     brain_calc()
+
 
 if __name__ == '__main__':
     main()

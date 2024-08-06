@@ -1,4 +1,6 @@
 from brain_games.scripts import brain_main
+
+
 def launch_the_game(module):
     brain_main.brain_main()
     print(module.desc)
