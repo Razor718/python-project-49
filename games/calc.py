@@ -1,8 +1,7 @@
 import random
-
+desc = 'What is the result of the expression?'
 def brain_calc():
-    print('What is the result of the expression?')
-    global a, b, c, answer, str_operator
+    global correct_answer, answer, desc
     a = random.randint(1, 1000)
     b = random.randint(1, 1000)
     operators = ['+', '-', '*']
@@ -13,11 +12,11 @@ def brain_calc():
     print('Your answer:', answer)
     match random_operator:
         case '+':
-            c = a + b
+            correct_answer = a + b
         case '-':
-            c = a - b
+            correct_answer = a - b
         case '*':
-            c = a * b
+            correct_answer = a * b
 
 def main():
     brain_calc()

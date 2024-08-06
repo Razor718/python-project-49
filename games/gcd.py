@@ -1,9 +1,8 @@
 import prompt
 import random
-
+desc = 'Find the greatest common divisor of given numbers.'
 def brain_gcd():
-    print('Find the greatest common divisor of given numbers.')
-    global result, answer
+    global desc, correct_answer, answer
     a = random.randint(1, 100)
     b = random.randint(1, 100)
     print(f"Question: {a} {b}")
@@ -12,7 +11,7 @@ def brain_gcd():
             a %= b
         else:
             b %= a
-    result = a + b
+    correct_answer = a + b
     answer = prompt.integer("Your answer: ")
 
 def main():

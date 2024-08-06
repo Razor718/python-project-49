@@ -1,101 +1,19 @@
 from brain_games.scripts import brain_main
-from games import calc, even, gcd, prime, progression
-def launch_the_game():
-    print('Please, select the game!')
+def launch_the_game(module):
+    brain_main.brain_main()
+    print(module.desc)
     userscore = 0
     winscore = 3
-    match input():
-        case 'brain-calc':
-            brain_main.brain_main()
-            while userscore < winscore:
-                calc.brain_calc()
-                if calc.c == calc.answer:
-                    print('Correct!')
-                    userscore += 1
-                else:
-                    print(f'''
-Question: {calc.a} {calc.str_operator} {calc.b}
-{calc.answer} is wrong answer ;(.
-Correct answer was {calc.c}.
+    while userscore < winscore:
+        module.main()
+        if module.correct_answer == module.answer:
+            print('Correct!')
+            userscore += 1
+        else:
+            print(f'''
+{module.answer} is wrong answer ;(.
+Correct answer was {module.correct_answer}.
 Let's try again, {brain_main.name}!''')
-                    break
-                if userscore == 3:
-                    print(f'Congratulations, {brain_main.name}!')
-        case 'brain-even':
-            brain_main.brain_main()
-            while userscore < winscore:
-                even.brain_even()
-                if even.random_number % 2 == 0 and even.answer != 'yes':
-                    print(f'''
-{even.answer} is wrong answer ;(.
-Correct answer was yes.
-Let's try again, {brain_main.name}!''')
-                    break
-                elif even.random_number % 2 != 0 and even.answer != 'no':
-                    print(f'''
-{even.answer} is wrong answer ;(.
-Correct answer was no.
-Let's try again, {brain_main.name}!''')
-                    break
-                else:
-                    print('Correct!')
-                    userscore += 1
-                if userscore == 3:
-                    print(f'Congratulations, {brain_main.name}!')
-        case 'brain-gcd':
-            brain_main.brain_main()
-            while userscore < winscore:
-                gcd.brain_gcd()
-                if gcd.answer == gcd.result:
-                    print('Correct!')
-                    userscore += 1
-                else:
-                    print(f'''
-{gcd.answer} is wrong answer ;(.
-Correct answer was {gcd.result}.
-Let's try again, {brain_main.name}!''')
-                    break
-                if userscore == 3:
-                    print(f"Congratulations, {brain_main.name}!")
-        case 'brain-prime':
-            brain_main.brain_main()
-            while userscore < winscore:
-                prime.brain_prime()
-                if prime.is_prime and prime.answer == 'yes':
-                    print('Correct!')
-                    userscore += 1
-                elif not prime.is_prime and prime.answer == 'no':
-                    print('Correct!')
-                    userscore += 1
-                else:
-                    print(f'''
-Question: {prime.random_number}
-Your answer: {prime.answer}
-{prime.answer} is wrong answer;(.
-Correct answer was {'yes' if prime.is_prime else 'no'}
-Let's try again, {brain_main.name}!''')
-                    break
-                if userscore == 3:
-                    print(f'Congratulations, {brain_main.name}!')
-        case 'brain-progression':
-            brain_main.brain_main()
-            while userscore < winscore:
-                progression.brain_progression()
-                if progression.answer == progression.random_index:
-                    print('Correct!')
-                    userscore += 1
-                else:
-                    print(f'''
-Question: {progression.str_result}
-Your answer: {progression.answer}
-{progression.answer} is wrong answer ;(.
-Correct answer was {progression.random_index}
-Let's try again, {brain_main.name}!''')
-                    break
-                if userscore == 3:
-                    print(f'Congratulations, {brain_main.name}!')
-def main():
-    launch_the_game()
-
-if __name__ == '__main__':
-    main()      
+            break
+        if userscore == winscore:
+            print(f'Congratulations, {brain_main.name}!')
