@@ -1,13 +1,12 @@
 import prompt
 
 
-def brain_main():
+def greet_the_player():
     print('Welcome to the Brain Games!')
-    global name
     name = prompt.string('May I have your name? ')
     print('Hello,', name + '!')
     return name
 
 
 if __name__ == '__main__':
-    brain_main()
+    greet_the_player()

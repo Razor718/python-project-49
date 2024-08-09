@@ -1,10 +1,9 @@
 import prompt
 import random
-desc = 'What number is missing in the progression?'
+DESC = 'What number is missing in the progression?'
 
 
 def brain_progression():
-    global desc, answer, correct_answer
     a = random.randint(1, 85)
     b = random.randint(99, 101)
     c = random.randint(2, 3)
@@ -14,13 +13,4 @@ def brain_progression():
     result[index] = '..'
     correct_answer = random_index
     str_result = ' '.join(map(str, result))
-    print(f'Question: {str_result}')
-    answer = prompt.integer('Your answer: ')
-
-
-def main():
-    brain_progression()
-
-
-if __name__ == '__main__':
-    main()
+    return str_result, str(correct_answer)

@@ -1,5 +1,4 @@
 # Ignore dependencies:
-.venv
 #
 .egg-info
 __pycache__
@@ -9,3 +8,11 @@ dist/
 .coverage
 coverage.xml
 .pytest_cache/
+brain_games/__pycache__
+calc.cast
+demo.cast
+even.cast
+gcd.cast
+prime.cast
+progression.cast
+brain_games/scripts/__pycache__
