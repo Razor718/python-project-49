@@ -1,6 +1,7 @@
 import random
 DESC = 'What is the result of the expression?'
 
+
 def brain_calc():
     a = random.randint(1, 1000)
     b = random.randint(1, 1000)

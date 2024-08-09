@@ -1,10 +1,6 @@
 from brain_games.scripts.brain_main import greet_the_player
-from brain_games.games import even
-from brain_games.games import calc
-from brain_games.games import gcd
-from brain_games.games import progression
-from brain_games.games import prime
 WINSCORE = 3
+
 
 def launch_the_game(module, game_func):
     userscore = 0

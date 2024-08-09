@@ -1,4 +1,3 @@
-import prompt
 import random
 DESC = 'What number is missing in the progression?'
 
